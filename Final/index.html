@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-size: 44px;
+      }
+
+      p span {
+        /* background-color: yellow; */
+        color: red;
+        text-decoration: line-through;
+      }
+
+      .radio {
+        display: flex;
+      }
+
+      .square{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+      }
+
+      @-webkit-keyframes rotating /* Safari and Chrome */ {
+        from {
+          -webkit-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes rotating {
+        from {
+          -ms-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        to {
+          -ms-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      .rotating {
+        -webkit-animation: rotating 2s linear infinite;
+        -moz-animation: rotating 2s linear infinite;
+        -ms-animation: rotating 2s linear infinite;
+        -o-animation: rotating 2s linear infinite;
+        animation: rotating 2s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>ДЗ 6</h2>
+
+    <div class="radio">
+      <legend>Слова, длиннее 8 символов</legend>
+      <input type="radio" name="radio" id="radio1" />
+    </div>
+    <div class="radio">
+      <legend>Слова, начинающиеся с гласных</legend>
+      <input type="radio" name="radio" id="radio2" />
+    </div>
+    <div class="radio">
+      <legend>Слова, заканчивающиеся на ться или тся</legend>
+      <input type="radio" name="radio" id="radio3" />
+    </div>
+    <p id="text">
+      Урок 6 * Написать приложение которое работает с текстом и выделяет
+      определенные фрагменты исходя из выбора пользователя. Интерфейс приложения
+      можно сделать свой (я не дизайнер поэтому у меня получается хреново😅) Как
+      должно выглядеть приложение с примерами показано на скриншотах. Текст
+      можете взять какой угодно. Заметьте что при выборе слов ,начинающихся на
+      гласные, предлоги типа а, у не входят в расчет, это надо тоже учесть.
+      Домашнее задание постарайтесь отправить через GitHub.
+    </p>
+
+    <button id="clickMe">Click me</button>
+
+    <h2 id="timer">10</h2>
+    <div class="square"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -13,9 +13,9 @@ const generateBlocks = () => {
   for (let i = 0; i < 4; i++) {
     const blockFromState = state.blocks[i];
     if (blockFromState && blockFromState.Locked) {
-      colorBlocksHTML += blockFromState[i];
+      colorBlocksHTML += blockFromState.render();
     } else {
-      const colorBlockComponent = new ColorBlock();
+      const colorBlockComponent = new ColorBlock(i);
       state.blocks[i] = colorBlockComponent;
       colorBlocksHTML += colorBlockComponent.render();
     }
